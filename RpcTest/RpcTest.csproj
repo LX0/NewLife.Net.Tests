@@ -1,18 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net45;netcoreapp2.1</TargetFrameworks>
-    <Deterministic>false</Deterministic>
-    <AssemblyVersion>1.1.*</AssemblyVersion>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\BinHandler</OutputPath>
+    <OutputPath>..\BinRpc</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\BinHandler</OutputPath>
+    <OutputPath>..\BinRpc</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>

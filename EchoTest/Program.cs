@@ -39,7 +39,11 @@ namespace EchoTest
             var svr = new MyNetServer
             {
                 Port = 1234,
-                Log = XTrace.Log
+                Log = XTrace.Log,
+                SessionLog = XTrace.Log,
+                SocketLog = XTrace.Log,
+                LogSend = true,
+                LogReceive = true,
             };
             svr.Start();
 
@@ -55,6 +59,8 @@ namespace EchoTest
             //var uri = new NetUri("tcp://net.newlifex.com:1234");
             var client = uri.CreateRemote();
             client.Log = XTrace.Log;
+            client.LogSend = true;
+            client.LogReceive = true;
             client.Received += (s, e) =>
             {
                 XTrace.WriteLine("收到：{0}", e.Packet.ToStr());
